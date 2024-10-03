@@ -18,10 +18,9 @@ collections:
     folder: "docs"
     create: true
     nested:
-      depth: 5  # Permite pastas até dois níveis de profundidade
-    slug: "{{fields.categoria}}/{{slug}}"
+      depth: 3  # Permite pastas até dois níveis de profundidade
+    slug: "{{fields.title}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Categoria", name: "categoria", widget: "string", hint: "Nome da pasta (categoria)" }
+      - { label: "Título", name: "title", widget: "string" }          
       - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - { label: "Categoria", name: "categoria", widget: "string", hint: "Nome da pasta (categoria)" }
