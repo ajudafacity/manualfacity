@@ -2,10 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Content Manager</title>
-    <!-- Atualize para a versão mais recente do Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <title>Administração - Netlify CMS</title>
+    <!-- Atualize para uma versão estável do Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.15.72/dist/netlify-cms.js"></script>
   </head>
   <body>
+    <!-- O Netlify CMS vai injetar o conteúdo aqui -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        const cmsElement = document.createElement('div');
+        document.body.appendChild(cmsElement);
+        CMS.init({ config: "/admin/config.yml" });
+      });
+    </script>
   </body>
 </html>
