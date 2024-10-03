@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Administração - Netlify CMS</title>
-    <!-- Carregar Netlify CMS de uma CDN -->
-    <script src="https://unpkg.com/netlify-cms@2.10.0/dist/netlify-cms.js"></script>
+    <!-- Carregar o Netlify CMS a partir de uma versão estável -->
+    <script src="https://unpkg.com/netlify-cms@2.10.0/dist/netlify-cms.min.js"></script>
   </head>
   <body>
     <script>
-      window.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function() {
         if (typeof CMS !== 'undefined') {
-          CMS.init({ config: "/admin/config.yml" });
+          CMS.init({
+            config: "/admin/config.yml"
+          });
         } else {
           console.error("CMS is not defined");
         }
