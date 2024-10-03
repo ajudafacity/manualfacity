@@ -15,14 +15,13 @@ site_url: "https://manualfacity.netlify.app/"  # Substitua pela URL do seu site
 collections:
   - name: "docs"
     label: "Documentação"
-    folder: "docs"  # Diretório principal onde as pastas serão criadas
+    folder: "docs"
     create: true
-    nested: true  # Ativa a navegação por pastas
-    identifier_field: "slug"
-    format: "frontmatter"
+    nested:
+      depth: 2  # Permite pastas até dois níveis de profundidade
+    slug: "{{fields.categoria}}/{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Categoria", name: "categoria", widget: "string", hint: "Nome da pasta (categoria)" }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
-    meta: { folder: "{{categoria}}/{{slug}}" }
