@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: ajudafacity/manualfacity  # Substitua pelo seu usuário e repositório
+  branch: main
+
+media_folder: "static/img" # Pasta para armazenar imagens
+public_folder: "/img"
+
+site_url: "https://seu-site.netlify.app"  # Substitua pela URL do seu site
+
+collections:
+  - name: "docs"
+    label: "Documentação"
+    folder: "docs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
