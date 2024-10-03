@@ -18,7 +18,10 @@ collections:
     folder: "docs"
     create: true
     slug: "{{slug}}"
+    media_folder: "static/img/docs/{{slug}}"
+    public_folder: "/img/docs/{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descrição", name: "description", widget: "text" }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - { label: "Categoria", name: "categoria", widget: "string", hint: "Nome da pasta dentro de /docs" }
