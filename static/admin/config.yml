@@ -6,7 +6,7 @@ backend:
 media_folder: "static/img" # Pasta para armazenar imagens
 public_folder: "/img"
 
-site_url: "https://manualfacity.netlify.app"  # Substitua pela URL do seu site
+site_url: "https://manualfacity.netlify.app/"  # Substitua pela URL do seu site
 
 collections:
   - name: "docs"
