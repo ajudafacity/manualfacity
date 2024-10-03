@@ -18,9 +18,9 @@ collections:
     folder: "docs"
     create: true
     nested:
-      depth: 3  # Permite pastas até dois níveis de profundidade
-    slug: "{{fields.title}}"
+      depth: 3  # Permitir a criação de subpastas até 2 níveis
+    slug: "{{fields.categoria}}/{{fields.title}}"  # Cria o slug baseado na categoria (pasta) e no título
     fields:
-      - { label: "Título", name: "title", widget: "string" }          
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Categoria", name: "categoria", widget: "string", hint: "Digite o nome da pasta ou subpasta (ex: tutorial-basics)" }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
-      - { label: "Categoria", name: "categoria", widget: "string", hint: "Nome da pasta (categoria)" }
