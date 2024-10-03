@@ -2,6 +2,10 @@ backend:
   name: github
   repo: ajudafacity/manualfacity  # Substitua pelo seu usuário e repositório
   branch: main
+  base_url: https://api.netlify.com
+  site_id: c56f02b1-db2e-4082-ad6b-350889284ce3
+  auth_endpoint: https://api.netlify.com
+ 
 
 media_folder: "static/img" # Pasta para armazenar imagens
 public_folder: "/img"
