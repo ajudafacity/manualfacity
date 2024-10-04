@@ -15,13 +15,13 @@ site_url: "https://manualfacity.netlify.app/"  # Substitua pela URL do seu site
 collections:
   - name: "docs"
     label: "Documentação"
-    folder: "docs"
+    folder: "docs"  # Diretório principal de documentos
     create: true
+    slug: "{{fields.slug}}"  # Utilizando o campo slug para criar o nome dos arquivos
     nested:
-      depth: 5  # Permitir criação de subpastas até 5 níveis
-    slug: "{{fields.categoria}}/{{slug}}"  # Usar o campo 'categoria' e 'slug' para o caminho do arquivo
+      depth: 10  # Permitir criar subpastas até 10 níveis
     fields:
-      - { label: "Título", name: "title", widget: "string" }  # Campo de título do documento
-      - { label: "Categoria/Pasta", name: "categoria", widget: "string", hint: "Digite o caminho da pasta (ex: pasta1/pasta2)" }  # Campo para o caminho da pasta
-      - { label: "Slug", name: "slug", widget: "string", hint: "Slug é o nome amigável do arquivo" }  # Nome final do arquivo
-      - { label: "Conteúdo", name: "body", widget: "markdown" }  # Campo para conteúdo em markdown
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "Nome do arquivo, sem espaços" }
+      - { label: "Categoria", name: "categoria", widget: "string", hint: "Nome da pasta ou subpasta" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
