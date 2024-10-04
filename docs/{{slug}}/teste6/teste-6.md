@@ -1,6 +1,6 @@
 ---
-title: teste 6
-categoria: teste6
-slug: teste6
+title: teste 7
+categoria: teste7
+slug: teste7
 ---
-# teste6
+# teste7
