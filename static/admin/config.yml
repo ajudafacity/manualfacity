@@ -15,12 +15,12 @@ site_url: "https://manualfacity.netlify.app/"  # Substitua pela URL do seu site
 collections:
   - name: "docs"
     label: "Documentação"
-    folder: "docs"
+    folder: "docs/{{fields.categoria}}"  # Diretório dinâmico com base na categoria
     create: true
     nested:
-      depth: 3  # Permitir a criação de subpastas até 2 níveis
-    slug: "{{fields.categoria}}/{{fields.title}}"  # Cria o slug baseado na categoria (pasta) e no título
+      depth: 3  # Permitir a criação de subpastas até 3 níveis
+    slug: "{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Categoria", name: "categoria", widget: "string", hint: "Digite o nome da pasta ou subpasta (ex: tutorial-basics)" }
+      - { label: "Categoria", name: "categoria", widget: "string", hint: "Digite o nome da pasta" }
       - { label: "Conteúdo", name: "body", widget: "markdown" }
